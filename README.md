@@ -5,4 +5,4 @@ Necesitan añadir la carpeta back que subio chessani para que funcione
 - VERIFICAN QUE SEAN LOS DATOS DE SU BASE DE DATOS
 - meten la url al usuarios.component.ts
 
-voy a subirla en otro repositorio.... este es el link: 
+voy a subirla en otro repositorio.... este es el link: https://github.com/Rzztr/Backend.git
