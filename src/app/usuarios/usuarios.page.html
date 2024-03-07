@@ -1,0 +1,33 @@
+<ion-content>
+  <h3>Administracion de usuarios</h3>
+  <ng-container>
+    <ion-grid>
+      <h3>Registros</h3>
+      <ion-row>
+        <ion-col>Id</ion-col>
+        <ion-col>Nombre</ion-col>
+        <ion-col>Apellido Paterno</ion-col>
+        <ion-col>Apellido Materno</ion-col>
+        <ion-col>Correo electronico</ion-col>
+        <ion-col>Contraseña</ion-col>
+        <ion-col>Direecion</ion-col>
+        <ion-col>Num. Telefono</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let art of articulos"><ion-col></ion-col>
+      <ion-col>id</ion-col>
+      <ion-col>Nombre</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-container>
+  <ng-template #sinarticulos>
+    <p>No hay articulos.</p></ng-template>
+  <p>ingresar usuario</p>
+  <ion-input type="text" [(ngModel)]="art.nombre">nombre</ion-input>
+  <ion-input type="text" [(ngModel)]="art.apaterno">ap paterno</ion-input>
+  <ion-input type="text" [(ngModel)]="art.amaterno">ap materno</ion-input>
+  <ion-input type="text" [(ngModel)]="art.correo">correo</ion-input>
+  <ion-input type="password" [(ngModel)]="art.pssw">contraseña</ion-input>
+  <ion-input type="text" [(ngModel)]="art.direccion">direccion</ion-input>
+  <ion-input type="text" [(ngModel)]="art.num">numero</ion-input>
+  <ion-button (click)="alta()">Agregar</ion-button>
+</ion-content>
