@@ -1,23 +1,27 @@
 <ion-content>
+
+
+
   <h3>Administracion de usuarios</h3>
+
+
+  <table border="1" *ngIf="hayRegistros(); else sinarticulos">
+    <tr>
+      <td>Nombre</td><td>Ap Pat</td><td>Ap Mat</td><td>Correo</td><td>Contraseña</td><td>Dirección</td><td>Num Teléfono</td><td>Borrar</td><td>Seleccionar</td>
+    </tr>
+    <tr *ngFor="let art of articulos">
+      <td>{{art.nombre}}</td>
+      <td>{{art.apaterno}}</td>
+      <td>{{art.amaterno}}</td>
+      <td>{{art.correo}}</td>
+      <td>{{art.pssw}}</td>
+      <td>{{art.direccion}}</td>
+      <td>{{art.numero}}</td>
+      <td><button (click)="baja(art.codigo)">Borrar?</button></td>
+      <td><button (click)="seleccionar(art.codigo)">Seleccionar</button></td>        
+    </tr>
+  </table>
   <ng-container>
-    <ion-grid>
-      <h3>Registros</h3>
-      <ion-row>
-        <ion-col>Id</ion-col>
-        <ion-col>Nombre</ion-col>
-        <ion-col>Apellido Paterno</ion-col>
-        <ion-col>Apellido Materno</ion-col>
-        <ion-col>Correo electronico</ion-col>
-        <ion-col>Contraseña</ion-col>
-        <ion-col>Direecion</ion-col>
-        <ion-col>Num. Telefono</ion-col>
-      </ion-row>
-      <ion-row *ngFor="let art of articulos"><ion-col></ion-col>
-      <ion-col>id</ion-col>
-      <ion-col>Nombre</ion-col>
-      </ion-row>
-    </ion-grid>
   </ng-container>
   <ng-template #sinarticulos>
     <p>No hay articulos.</p></ng-template>

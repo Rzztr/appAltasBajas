@@ -6,27 +6,28 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ArticulosService {
 
-  url='http://localhost/backphp/'; // disponer url de su servidor que tiene las páginas PHP
+  url='http://localhost/'; // disponer url de su servidor que tiene las páginas PHP
 
   constructor(private http: HttpClient) { }
 
   recuperarTodos() {
+    console.log("recuperartodos service");
     return this.http.get(`${this.url}recuperartodos.php`);
   }
 
-  alta(articulo:any) {
-    return this.http.post(`${this.url}alta.php`, JSON.stringify(articulo));    
+  alta(id:any) {
+    return this.http.post(`${this.url}alta.php`, JSON.stringify(id));    
   }
 
-  baja(codigo:number) {
-    return this.http.get(`${this.url}baja.php?codigo=${codigo}`);
+  baja(id:number) {
+    return this.http.get(`${this.url}baja.php?codigo=${id}`);
   }
   
-  seleccionar(codigo:number) {
-    return this.http.get(`${this.url}seleccionar.php?codigo=${codigo}`);
+  seleccionar(id:number) {
+    return this.http.get(`${this.url}seleccionar.php?codigo=${id}`);
   }
 
-  modificacion(articulo:any) {
-    return this.http.post(`${this.url}modificacion.php`, JSON.stringify(articulo));    
+  modificacion(id:any) {
+    return this.http.post(`${this.url}modificacion.php`, JSON.stringify(id));    
   } 
 }

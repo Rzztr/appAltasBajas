@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 export class UsuariosPage implements OnInit {
   articulos:any;
   art = {
+    id:0,
     nombre: "",
     apaterno: "",
     amaterno: "",
